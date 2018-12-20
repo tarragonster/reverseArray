@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        var n = parseInt(prompt("Please enter the number of elements "));
+
+        a = [];
+        for(i =0; i<n; i++){
+
+            a[i] = parseInt(prompt("Please enter element value"));
+
+        }
+        document.write(a + "<br>");
+        document.write(reverseArray(a));
+
+        function reverseArray(a) {
+            var lastElement = a.length-1;
+            var firstElement = 0;
+
+        while(firstElement < lastElement){
+            b = a[firstElement];
+
+            a[firstElement] = a[lastElement];
+            a[lastElement] = b;
+
+            firstElement++;
+            lastElement--;
+        }
+        return a;
+        }
+
+    </script>
+
+</body>
+</html>
